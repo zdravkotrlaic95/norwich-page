@@ -1,0 +1,59 @@
+.footer{
+    padding: 3rem;
+    background-color: $color-grey-1-dark;
+    height: 35rem;
+    &__logo-box{
+        height: 50%;
+    }
+    &__logo{
+        border: 0;
+        height: 100%;
+    }
+    &__left-cred{
+        display: inline-block;
+        margin-left: -2rem;
+        padding-top: 1rem;
+        border-top: .1rem solid $color-grey-1-lighter;
+    }
+    &__list{
+        list-style: none;
+    }
+    &__link{
+        &:link,
+        &:visited{
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-grey-1-dark;
+        font-size: $default-font-size;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: all .2s;
+        }
+        &:hover,
+        &:active{
+            color: $color-primary-g;
+            transform: translateY(-.5rem) skewY(5deg) scale(1.2);
+            box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        }
+    }
+
+
+    &__item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &__right-cred{
+        width: 75%;
+        float: right;
+        border-top: .1rem solid $color-grey-1-lighter;
+        padding-top: 1rem;
+    }
+    &__paragraph{
+        
+        font-size: $font-size-small;
+        color: $color-white;
+    }
+}

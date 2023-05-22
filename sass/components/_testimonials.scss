@@ -1,0 +1,49 @@
+.testimonials{
+    width: 80%;
+    margin: 0 auto;
+    &__item{
+        background-color: rgba($color-white,.7);
+        padding: 6rem 8.5rem;
+        transform: skewX(-12deg);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+       
+    }
+    &__picture{
+        height: 15rem;
+        width: 15rem;
+        overflow: hidden;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-2rem) skewX(12deg);   
+    }
+    &__item:hover &__img{
+        filter: blur(.3rem);
+        transform:translateX(-6.2rem) scale(1);
+    }
+    &__item:hover &__name{
+        opacity: 1;
+        transform:translateY(-11rem);
+    }
+    &__img{
+        backface-visibility: hidden;
+        transform: translate(-6.8rem,1.5rem) scale(1.2);
+        height: 100%;
+        transition: all .5s;
+    }
+    &__name{
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        color: $color-white;
+        -webkit-transform: translateY(-2rem);
+        transform: translateY(-6rem); 
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &__text{
+        transform: skewX(12deg);
+    }
+}
