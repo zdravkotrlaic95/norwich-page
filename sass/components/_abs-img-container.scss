@@ -1,0 +1,36 @@
+.abs-img-container{
+    position: relative;
+    
+    
+    &__img{
+        position: absolute;
+        border-radius: 3px;
+        width: 55%;
+        box-shadow: 0 2rem 4rem rgba($color-black, .4);
+        outline-offset: 2rem;
+        transition: all .3s;
+    }
+    
+    &__img1{
+        top: -2rem;
+        left: 0;
+    }
+    &__img2{
+        top: 2rem;
+        right: 0;
+    }
+    &__img3{
+        top: 10rem;
+        left: 20%;
+    }
+    &__img:hover{
+        transform: scale(1.4) translateY(-3rem);
+        z-index: 2;
+        outline: 1.5rem solid $color-primary-g;
+        box-shadow: 0 2.5rem 5rem rgba($color-black, .5);
+    }
+    &:hover &__img:not(:hover){
+        transform: scale(0.6);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .3);
+    }
+}

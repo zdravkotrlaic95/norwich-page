@@ -1,0 +1,140 @@
+.ticket{
+    height: 52rem;
+    position: relative;
+    perspective: 200rem;
+    &__side{
+        background-color:$color-white;
+        border-radius: .9rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        backface-visibility: hidden;
+        transition: all .9s;
+        &--front{
+            background-color: $color-white;
+        }
+        &--back{
+            transform: rotateY(180deg);
+            &-1{
+                background-image: linear-gradient(to right bottom,
+                rgba($color-primary-g-light,.9),
+                rgba($color-primary-g-dark,.9));
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom,
+                rgba($color-primary-y-light,.9),
+                rgba($color-primary-y-dark,.9));
+            }
+            &-3{
+                background-image: linear-gradient(to bottom,
+                rgba($color-primary-g,.9) 50%,
+                rgba($color-primary-y,.9) 50%);
+            }
+        }
+    }
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+    //----FRONT SIDE----
+    &__upper{
+        height: 23rem;
+        position: relative;
+    }
+    &__img{
+        height: 100%;
+        background-size: cover;
+        background-position: top;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0,100% 0, 100% 87%, 0 100%);
+        &--1{
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-g-light,.7),
+            rgba($color-primary-g-dark,.7)),
+            url(../img/norwich-pic-5.jfif);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-y-light,.7),
+            rgba($color-primary-y-dark,.7)),
+            url(../img/norwich-pic-6.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to bottom,
+            rgba($color-primary-g,.7) ,
+            rgba($color-primary-y,.7)) ,
+            url(../img/norwich-pic-7.jpg);
+        }
+    }
+    &__text{
+        color: $color-white;
+        font-size: 2.7rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        width: 70%;
+    }
+    &__span{
+        padding: .8rem 1.2rem;
+        box-decoration-break: clone;
+        &--1{
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-g,.8),
+            rgba($color-primary-g,.8));
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-y,.9),
+            rgba($color-primary-y,.9));
+        }
+        &--3{
+            background-image: linear-gradient(to bottom,
+            rgba($color-primary-g-dark,.9),
+            rgba($color-primary-y-dark,.9));
+        }
+    }
+    &__list{
+        list-style: none;
+        font-size: $default-font-size;
+        text-align: center;
+    }
+    &__item{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        &:not(:last-child){
+            padding-bottom: 1.1rem;
+            border-bottom: .1rem solid $color-grey-1-light;
+            margin-bottom: 1.1rem;
+        }
+    }
+ 
+    //----BACK SIDE----
+
+    &__back-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) ;
+    }
+    &__note{
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    &__price{
+        font-size: 6rem;
+        font-weight: 100;
+        color: $color-white;
+        letter-spacing: .2rem;
+    }
+}

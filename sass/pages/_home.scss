@@ -1,0 +1,37 @@
+.section-offer{
+    padding: 22rem 0;
+    background: $color-grey-bg;
+    margin-top: -20vh;
+
+    &__part-1{
+        margin-bottom: 3rem;
+    }
+    &__part-2{
+        margin-bottom: 2.5rem;
+    }
+}
+.section-features{
+    margin-top: -7.6rem;
+    padding: 20rem 0;
+    background-image:linear-gradient(to right bottom,
+        rgba($color-primary-g-light,.7),
+        rgba($color-primary-g-dark,.7)), 
+        url(../img/norwich-pic-4.jpg);
+    background-size: cover;
+    background-position:center;
+    transform:skewY(-6deg) ;
+}
+.section-tickets{
+    padding: 22rem 0 11rem 0;
+    background: $color-grey-bg;
+    margin-top: -8rem;
+}
+.section-testimonials{
+    padding: 13rem 0 5rem 0;
+    position: relative;
+}
+.section-booking{
+    background-image: linear-gradient(to right bottom,$color-primary-g-light,$color-primary-g-dark);
+    padding: 15rem 0;
+}
+

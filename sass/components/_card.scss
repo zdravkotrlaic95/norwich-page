@@ -1,0 +1,18 @@
+.card{
+    padding: 3.5rem 2rem;
+    background-image:linear-gradient(rgba($color-white,.87),rgba($color-white,.87)) ;
+    border-radius: .3rem;
+    box-shadow: 0 1rem 2rem (rgba($color-black,.2));
+    transform: skewY(6deg);
+    transition: all .3s;
+    &__icon{
+        display: inline-block;
+        font-size: 6rem;
+        margin-bottom: 2.5rem;
+        color: $color-primary-g;
+    }
+    &:hover{
+        transform: translateY(-3rem) scale(1.1) skewY(6deg);
+        box-shadow: 0 1.5rem 3rem (rgba($color-black,.2));
+    }
+}
