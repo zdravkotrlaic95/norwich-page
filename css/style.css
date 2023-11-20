@@ -10,13 +10,13 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 320;
-  line-height: 120%;
-  margin: 2rem;
+  font-weight: 370;
+  line-height: 130%;
+  margin: 4rem;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 200;
   line-height: 100%;
   text-transform: uppercase;
